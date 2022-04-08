@@ -1,0 +1,2 @@
+- name: Domain and SSL cert watcher
+  uses: codex-team/action-check-domain@v1.2
