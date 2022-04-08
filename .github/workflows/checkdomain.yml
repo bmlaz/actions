@@ -21,6 +21,6 @@ jobs:
           url: ${{ matrix.domain }}
           
       - run: echo 'SSL cert has ${{ steps.check-domain.outputs.ssl-expire-days-left }} days left'
-      - run: echo 'SSL cert has ${{ steps.check-domain.outputs.paid-till-days-left }} days left'
+      - run: echo 'Registry expiration date ${{ steps.check-domain.outputs.paid-till-days-left }} days left'
 
         
