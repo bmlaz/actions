@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         domain:
-          - ${{github.events.inputs.domain}}
+          - ${{ github.event.inputs.domain }}
 
     steps:
       - name: Check domain SSL and registry expire date
