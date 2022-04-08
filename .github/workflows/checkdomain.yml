@@ -3,6 +3,11 @@ name: Check domains
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs: 
+      domain: 
+        description: 'name of the domain'
+        required: true
+        default: 'https://thundra.io'
 
 jobs:
   hello:
@@ -11,7 +16,7 @@ jobs:
     strategy:
       matrix:
         domain:
-          - https://thundra.io
+          - ${{github.events.inputs.domain}}
 
     steps:
       - name: Check domain SSL and registry expire date
